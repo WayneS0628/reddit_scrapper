@@ -12,7 +12,7 @@ reddit = praw.Reddit(
 def get_top_stories(subreddit, limit=10):
     subreddit_obj = reddit.subreddit(subreddit)
     stories = []
-    for submission in subreddit_obj.top(limit=limit):
+    for submission in subreddit_obj.top(limit=limit, time_filter = "day"):
         story = {
             'title': submission.title,
             'selftext': submission.selftext,

@@ -13,7 +13,7 @@ def get_top_posts_and_comments(subreddit, post_limit=3, comment_limit=10):
     subreddit_obj = reddit.subreddit(subreddit)
     posts = []
 
-    for submission in subreddit_obj.top(limit=post_limit):
+    for submission in subreddit_obj.top(limit=post_limit, time_filter = "week"):
         post_data = {
             'title': submission.title,
             'selftext': submission.selftext,
