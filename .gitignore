@@ -14,3 +14,4 @@ __pycache__/
 *.egg-info/
 *.venv
 env/
+reddit_scrapper.txt
